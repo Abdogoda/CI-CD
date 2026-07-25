@@ -12,7 +12,7 @@ jobs:
 
       - name: Changes
         run: |
-          echo "Actor: ${{ github.actor }}"
+          echo "Actor: ${{ github.actor }
           echo "Commit: ${{ github.sha }}"
       
       - name: Repository Changed
