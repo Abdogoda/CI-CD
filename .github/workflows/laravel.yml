@@ -14,10 +14,15 @@ jobs:
         working-directory: laravel
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - run: pwd
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: 8.4
 
-      - run: cat README.md
+      - name: Display PHP version
+        run: php -v
       
       - run: echo "Laravel Project Tested"
