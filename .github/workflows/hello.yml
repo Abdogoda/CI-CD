@@ -17,6 +17,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    needs: hello
+
     steps:
       - run: echo "Test is completed"
       
