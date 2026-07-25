@@ -7,5 +7,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: laravel
+
     steps:
+      - uses: actions/checkout@v4
+
+      - run: pwd
+      
       - run: echo "Laravel Project Tested"
