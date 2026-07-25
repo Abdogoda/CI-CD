@@ -13,3 +13,15 @@ jobs:
 
       - name: Print a message
         run: echo "Welcome to GITHUB ACTIONS!"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Test is completed"
+      
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Build is completed"
