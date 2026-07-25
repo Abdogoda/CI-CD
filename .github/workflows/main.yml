@@ -13,7 +13,7 @@ jobs:
       - name: Print Info
         run: |
           echo "Actor: ${{ github.actor }}"
-          echo "Commit: ${{ github.sha }}
+          echo "Commit: ${{ github.sha }}"
       
       - name: Repository Changed
         run: echo "A Project has been updated!"
