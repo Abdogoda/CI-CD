@@ -1,0 +1,12 @@
+name: Detect Project Change
+
+on:
+  push:
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repository Changed
+        run: echo "A Project has been updated!"
