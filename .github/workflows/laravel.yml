@@ -1,0 +1,11 @@
+name: Test Laravel Project
+
+on: 
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: echo "Laravel Project Tested"
