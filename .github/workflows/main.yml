@@ -8,5 +8,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
+
+      - name: Changes
+        run: |
+          echo "Actor: ${{ github.actor }}"
+          echo "Commit: ${{ github.sha }}"
+      
       - name: Repository Changed
         run: echo "A Project has been updated!"
