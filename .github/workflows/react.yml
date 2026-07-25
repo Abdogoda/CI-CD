@@ -11,13 +11,27 @@ jobs:
 
     defaults:
       run:
-        working-directory: laravel
+        working-directory: react
 
     steps:
-      - uses: actions/checkout@v4
-
-      - run: pwd
-
-      - run: cat README.md
+      - name: React Checkout
+        uses: actions/checkout@v4
       
-      - run: echo "React Project Built"
+      - name: Setup NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: 'react/package-lock.json'
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React Project
+        run: npm run build
+
+      - name: Push to react-build branch
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          branch: react-build
+          folder: react/dist
